@@ -8,6 +8,7 @@ type nativeButtonType = {
     onPress?: () => void
     /** margin top 顶部高度 */
     top?: number
+    alignSelf?: string
 }
 
 const NativeButtion: React.FC<nativeButtonType> = ({ content, onPress, top }) => {

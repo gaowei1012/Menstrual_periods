@@ -17,6 +17,7 @@ const VerifiInput: React.FC<VerifiInputType> = ({ placeholder, placeholderTextCo
             placeholderTextColor={placeholderTextColor}
             onChangeText={onChangeText}
             onBlur={onBlur}
+            maxLength={1}
         />
     )
 }
