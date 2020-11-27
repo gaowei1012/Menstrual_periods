@@ -3,6 +3,12 @@ import styles from '../../styles/verification'
 import { SafeAreaView, Text, View, TouchableOpacity } from 'react-native'
 import { VerifiInput } from '../../components/verification'
 import { NativeButtion } from '../../components/button'
+import { NavigationBar } from '../../navigation/TopNavigationBar'
+
+const StatusBar = {
+    backgroundColor: '#ffffff',
+    barStyle: 'dark-content',
+}
 
 const VerifiPage = (props) => {
     const [phone, setPhone] = useState(null)
@@ -42,6 +48,7 @@ const VerifiPage = (props) => {
 
     return (
         <SafeAreaView style={styles.verification}>
+            <NavigationBar statusBar={StatusBar} style={{ backgroundColor: '#F2F4F7' }} leftButton={GoBack(props)} />
             <Text style={styles.verificationText}>输入验证码</Text>
             <View style={styles.verificationCode}>
                 <VerifiInput onChangeText={handleChangeCode} />
