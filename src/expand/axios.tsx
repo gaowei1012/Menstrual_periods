@@ -1,7 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios'
+import { base_url } from './api'
 
 const instance = axios.create({
-    baseURL: 'http://xxxx',
+    baseURL: base_url,
     timeout: 3000,
 })
 

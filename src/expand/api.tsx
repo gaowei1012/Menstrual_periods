@@ -1,3 +1,1 @@
-module.exports = {
-    // TODO
-}
+export const base_url = ''
