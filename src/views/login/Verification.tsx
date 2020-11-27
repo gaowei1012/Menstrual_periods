@@ -45,6 +45,8 @@ const VerifiPage = (props) => {
 
     const handleSendCode = () => {
         setCount(59)
+
+        // 发送验证码
     }
 
     return (
