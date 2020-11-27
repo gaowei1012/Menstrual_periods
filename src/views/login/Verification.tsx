@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styles from '../../styles/verification'
+import { GoBack } from '../../utils/goback'
 import { SafeAreaView, Text, View, TouchableOpacity } from 'react-native'
 import { VerifiInput } from '../../components/verification'
 import { NativeButtion } from '../../components/button'
@@ -48,7 +49,7 @@ const VerifiPage = (props) => {
 
     return (
         <SafeAreaView style={styles.verification}>
-            <NavigationBar statusBar={StatusBar} style={{ backgroundColor: '#F2F4F7' }} leftButton={GoBack(props)} />
+            <NavigationBar statusBar={StatusBar} leftButton={GoBack(props)} />
             <Text style={styles.verificationText}>输入验证码</Text>
             <View style={styles.verificationCode}>
                 <VerifiInput onChangeText={handleChangeCode} />

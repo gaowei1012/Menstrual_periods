@@ -1,79 +1,80 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from '../styles/topnavigationbar'
-import { View, Text, StatusBar } from 'react-native'
+import { View, Text, StatusBar, ViewPropTypes } from 'react-native'
 
-// const DEFAULT_COLOR: string = '#85DFD2'
-// const WITHE_COLOR: string = 'wihte'
-// const INDEX_STATUTS_COLOR: string ='ragb(255, 255, 255, 0.1)'
-
-type StatusBarShapeType = {
-    /** 'light-content' | 'default' */
-    barStyle?: any
-    hidden?: boolean
-    backgroundColor?: string
+const StatusBarShape = {
+    barStyle: PropTypes.oneOf(['light-content', 'default']),
+    hidden: PropTypes.bool,
+    backgroundColor: PropTypes.string,
 }
 
-type NavigationBarType = {
-    /** 状态栏动画 */
-    animated?: boolean
-    /** 字体大小 */
-    fontSize?: number
-    /** 字体颜色 */
-    color?: string
-    /** 状态栏 */
-    statusBar: StatusBarShapeType
-    /** 样式 */
-    style?: any
-    /** 标题 */
-    title?: string
-    /** 标题 View */
-    titleView?: Element
-    /** title layout style */
-    titleLayoutStyle?: any
-    /** 左侧按钮  */
-    leftButton?: Element
-    /** 右侧按钮 */
-    rightButton?: Element
-    /** 状态栏是否为透明 */
-    translucent?: boolean
-    /** 是否隐藏 */
-    hide?: boolean
-}
-
-const NavigationBar: React.FC<NavigationBarType> = (props) => {
-    const getButtonElement = (ele: any) => {
-        return <View>{ele ? ele : null}</View>
+export default class NavigationBar extends React.Component<any, any> {
+    static propTypes = {
+        style: ViewPropTypes.style,
+        title: PropTypes.string,
+        titleView: PropTypes.element,
+        titleLayoutStyle: ViewPropTypes.style,
+        statusBar: PropTypes.shape(StatusBarShape),
+        rightButton: PropTypes.element,
+        leftButton: PropTypes.element,
+        translucent: PropTypes.bool, // 是否将状态栏设为透明
+        color: PropTypes.string,
+        fontSize: PropTypes.number,
+        animated: PropTypes.bool, // 状态栏动画
     }
 
-    const titleView = props.titleView ? (
-        props.titleView
-    ) : (
-        <Text
-            //ellipsizeMode="head"
-            numberOfLines={1}
-            style={[styles.title, { color: props.color, fontSize: props.fontSize }]}>
-            {props.title}
-        </Text>
-    )
+    static defaultProps = {
+        // transparent: false
+        statusBar: {
+            barStyle: 'light-content',
+            hidden: false,
+            translucent: false,
+            animated: true,
+        },
+        color: '#333',
+        fontSize: 16,
+    }
 
-    const content = props.hide ? null : (
-        <View style={styles.navBar}>
-            <View style={styles.leftBtnBox}>{getButtonElement(props.leftButton)}</View>
-            <View style={[styles.navBarTitleContainer, props.titleLayoutStyle]}>{titleView}</View>
-            <View style={styles.rightBtnBox}>{getButtonElement(props.rightButton)}</View>
-        </View>
-    )
+    render() {
+        let { fontSize, color } = this.props
+        let statusBar = !this.props.statusBar.hidden ? (
+            <View style={styles.statusBar}>
+                <StatusBar {...this.props.statusBar} />
+            </View>
+        ) : null
+        let titleView = this.props.titleView ? (
+            this.props.titleView
+        ) : (
+            <Text
+                //ellipsizeMode="head"
+                numberOfLines={1}
+                style={[styles.title, { color: color, fontSize: fontSize }]}>
+                {this.props.title}
+            </Text>
+        )
+        let content = this.props.hide ? null : (
+            <View style={styles.navBar}>
+                <View style={styles.leftBtnBox}>{this.getButtonElement(this.props.leftButton)}</View>
+                <View style={[styles.navBarTitleContainer, this.props.titleLayoutStyle]}>{titleView}</View>
+                <View style={styles.rightBtnBox}>{this.getButtonElement(this.props.rightButton)}</View>
+            </View>
+        )
+        return (
+            <View style={[styles.container, this.props.style]}>
+                {statusBar}
+                {content}
+            </View>
+        )
+    }
 
-    return (
-        <View style={[styles.container]}>
-            {props.statusBar.hidden ? (
-                <View style={styles.statusBar}>
-                    <StatusBar {...props.statusBar} />
-                </View>
-            ) : null}
-            {content}
-        </View>
-    )
+    /**
+     * @param ele element 元素节点
+     * @returns {*}
+     */
+    getButtonElement(ele) {
+        return <View style={styles.navBarButton}>{ele ? ele : null}</View>
+    }
 }
 
 export { NavigationBar }
