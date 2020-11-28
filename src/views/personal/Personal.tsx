@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, Text } from 'react-native'
 
-const About = () => {
+const Personal = () => {
     return (
         <SafeAreaView>
             <Text>about</Text>
@@ -9,4 +9,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Personal

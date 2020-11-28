@@ -6,7 +6,7 @@ import { createReactNavigationReduxMiddleware, reduxifyNavigator } from 'react-n
 import WelcomPage from '../views/welcom'
 import NewsPage from '../views/news'
 import GuestPage from '../views/guest'
-import AboutPage from '../views/about'
+import PersonalPage from '../views/personal'
 import HomePage from '../views/home'
 import LoginPage from '../views/login'
 import VerifiPage from '../views/login/Verification'
@@ -41,8 +41,8 @@ const MainNavigator = createStackNavigator({
             header: null,
         },
     },
-    AboutPage: {
-        screen: AboutPage,
+    PersonalPage: {
+        screen: PersonalPage,
         navigationOptions: {
             header: null,
         },

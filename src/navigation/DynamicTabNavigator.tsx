@@ -6,7 +6,7 @@ import styles from '../styles/dynamic'
 
 import News from '../views/news'
 import Guest from '../views/guest'
-import About from '../views/about'
+import Personal from '../views/personal'
 
 // svg
 import HomeSvg from '../assets/tab/language.svg'
@@ -57,8 +57,8 @@ class DynamicTabNavigator extends Component {
                 },
             },
         },
-        Cropper: {
-            screen: About,
+        Personal: {
+            screen: Personal,
             navigationOptions: {
                 tabBarLabel: '农作物改良',
                 tabBarIcon: ({ tintColor, focused }) => {
@@ -81,8 +81,8 @@ class DynamicTabNavigator extends Component {
         if (this.Tabs) {
             return this.Tabs
         }
-        const { Index, Land, Cropper } = this.TABS
-        const tabs = { Index, Land, Cropper }
+        const { Index, Land, Personal } = this.TABS
+        const tabs = { Index, Land, Personal }
         // IndexPage.navigationOptions.tabBarLabel = '首页';
         return (this.Tabs = createBottomTabNavigator(tabs, {
             tabBarComponent: (props) => {
