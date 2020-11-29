@@ -26,10 +26,10 @@ instance.interceptors.response.use(
     }
 )
 
-export const Http = ({ url, method, data }) => {
+export const Http = (url, method, data) => {
     return instance({
-        url,
-        method,
-        data,
+        url: url,
+        method: method,
+        data: data === {} ? '' : data,
     })
 }
