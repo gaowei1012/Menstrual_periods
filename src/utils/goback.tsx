@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-import React from 'react'
-import styles from '../styles/goback'
-import { View, TouchableOpacity } from 'react-native'
-import NavigationUtil from '../navigation/NavigationUtil'
+import React from 'react';
+import styles from '../styles/goback';
+import { View, TouchableOpacity } from 'react-native';
+import NavigationUtil from '../navigation/NavigationUtil';
 
 // svg
 import Navigate from '../assets/svg/navigate.svg';
@@ -16,7 +16,7 @@ function GoBack(props) {
                 </View>
             </TouchableOpacity>
         </View>
-    )
+    );
 }
 
-export { GoBack }
+export { GoBack };
