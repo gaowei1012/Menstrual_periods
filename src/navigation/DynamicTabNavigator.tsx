@@ -28,7 +28,7 @@ class DynamicTabNavigator extends Component {
         Index: {
             screen: News,
             navigationOptions: {
-                tabBarLabel: '首页',
+                tabBarLabel: '姨妈记录',
                 tabBarIcon: ({ tintColor, focused }) => {
                     return (
                         <TabBarItem
@@ -44,7 +44,7 @@ class DynamicTabNavigator extends Component {
         Knowledge: {
             screen: Knowledge,
             navigationOptions: {
-                tabBarLabel: '我的土地',
+                tabBarLabel: '孕期知识',
                 tabBarIcon: ({ tintColor, focused }) => {
                     return (
                         <TabBarItem
@@ -60,7 +60,7 @@ class DynamicTabNavigator extends Component {
         Personal: {
             screen: Personal,
             navigationOptions: {
-                tabBarLabel: '农作物改良',
+                tabBarLabel: '我的',
                 tabBarIcon: ({ tintColor, focused }) => {
                     return (
                         <TabBarItem
