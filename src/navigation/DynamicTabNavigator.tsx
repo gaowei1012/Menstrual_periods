@@ -5,7 +5,7 @@ import { createAppContainer, BottomTabBar, createBottomTabNavigator } from 'reac
 import styles from '../styles/dynamic'
 
 import News from '../views/news'
-import Guest from '../views/guest'
+import Knowledge from '../views/knowledge'
 import Personal from '../views/personal'
 
 // svg
@@ -41,8 +41,8 @@ class DynamicTabNavigator extends Component {
                 },
             },
         },
-        Land: {
-            screen: Guest,
+        Knowledge: {
+            screen: Knowledge,
             navigationOptions: {
                 tabBarLabel: '我的土地',
                 tabBarIcon: ({ tintColor, focused }) => {
@@ -81,8 +81,8 @@ class DynamicTabNavigator extends Component {
         if (this.Tabs) {
             return this.Tabs
         }
-        const { Index, Land, Personal } = this.TABS
-        const tabs = { Index, Land, Personal }
+        const { Index, Knowledge, Personal } = this.TABS
+        const tabs = { Index, Knowledge, Personal }
         // IndexPage.navigationOptions.tabBarLabel = '首页';
         return (this.Tabs = createBottomTabNavigator(tabs, {
             tabBarComponent: (props) => {

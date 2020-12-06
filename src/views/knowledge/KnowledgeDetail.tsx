@@ -1,5 +1,6 @@
 import React from 'react'
 import { GoBack } from '../../utils/goback'
+import styles from '../../styles/knowledgedetail'
 import { SafeAreaView, Text } from 'react-native'
 import { NavigationBar } from '../../navigation/TopNavigationBar'
 
@@ -8,13 +9,13 @@ const StatusBar = {
     barStyle: 'dark-content',
 }
 
-const RankingPage = (props) => {
+const KnowledgeDetail = (props) => {
     return (
-        <SafeAreaView>
-            <NavigationBar statusBar={StatusBar} leftButton={GoBack(props)} title="打卡排行" />
-            <Text>ranking</Text>
+        <SafeAreaView style={styles.knowledgeContainer}>
+            <NavigationBar statusBar={StatusBar} leftButton={GoBack(props)} title="详情" />
+            <Text>Knowledge Detail</Text>
         </SafeAreaView>
     )
 }
 
-export default RankingPage
+export default KnowledgeDetail

@@ -5,7 +5,7 @@ import { createReactNavigationReduxMiddleware, reduxifyNavigator } from 'react-n
 
 import WelcomPage from '../views/welcom'
 import NewsPage from '../views/news'
-import GuestPage from '../views/guest'
+import KnowledgePage from '../views/knowledge'
 import PersonalPage from '../views/personal'
 import HomePage from '../views/home'
 import LoginPage from '../views/login'
@@ -15,6 +15,7 @@ import SettingPage from '../views/personal/Setting'
 import RankingPage from '../views/personal/Ranking'
 import HelpCenterPage from '../views/personal/HelpCenter'
 import RecordingPage from '../views/personal/Recording'
+import KnowledgeDetailPage from '../views/knowledge/KnowledgeDetail'
 
 export const rootCom: string = 'Init'
 
@@ -34,8 +35,8 @@ const MainNavigator = createStackNavigator({
             header: null,
         },
     },
-    GuestPage: {
-        screen: GuestPage,
+    KnowledgePage: {
+        screen: KnowledgePage,
         navigationOptions: {
             header: null,
         },
@@ -90,6 +91,12 @@ const MainNavigator = createStackNavigator({
     },
     RecordingPage: {
         screen: RecordingPage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    KnowledgeDetailPage: {
+        screen: KnowledgeDetailPage,
         navigationOptions: {
             header: null,
         },
