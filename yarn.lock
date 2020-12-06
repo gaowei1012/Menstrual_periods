@@ -1395,6 +1395,11 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
   integrity sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
 
+"@types/lodash@^4.14.165":
+  version "4.14.165"
+  resolved "https://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.165.tgz#74d55d947452e2de0742bad65270433b63a8c30f"
+  integrity sha1-dNVdlHRS4t4HQrrWUnBDO2Ooww8=
+
 "@types/node@*":
   version "14.14.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.10.tgz#5958a82e41863cfc71f2307b3748e3491ba03785"
@@ -6572,8 +6577,8 @@ react-native-svg-transformer@^0.14.3:
 
 react-native-svg@^12.1.0:
   version "12.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
-  integrity sha512-1g9qBRci7man8QsHoXn6tP3DhCDiypGgc6+AOWq+Sy+PmP6yiyf8VmvKuoqrPam/tf5x+ZaBT2KI0gl7bptZ7w==
+  resolved "https://registry.npm.taobao.org/react-native-svg/download/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
+  integrity sha1-rP5Iw1zV/KPV/XZ6uuBWDDbPwD0=
   dependencies:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"

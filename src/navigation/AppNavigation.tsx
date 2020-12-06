@@ -10,6 +10,11 @@ import PersonalPage from '../views/personal'
 import HomePage from '../views/home'
 import LoginPage from '../views/login'
 import VerifiPage from '../views/login/Verification'
+import SharePage from '../views/personal/Share'
+import SettingPage from '../views/personal/Setting'
+import RankingPage from '../views/personal/Ranking'
+import HelpCenterPage from '../views/personal/HelpCenter'
+import RecordingPage from '../views/personal/Recording'
 
 export const rootCom: string = 'Init'
 
@@ -55,6 +60,36 @@ const MainNavigator = createStackNavigator({
     },
     VerifiPage: {
         screen: VerifiPage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    SharePage: {
+        screen: SharePage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    SettingPage: {
+        screen: SettingPage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    RankingPage: {
+        screen: RankingPage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    HelpCenterPage: {
+        screen: HelpCenterPage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    RecordingPage: {
+        screen: RecordingPage,
         navigationOptions: {
             header: null,
         },

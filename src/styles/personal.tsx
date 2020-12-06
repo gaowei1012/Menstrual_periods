@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     headerSetting: {
         alignSelf: 'flex-end',
         marginRight: px2dp(30),
-        marginTop: px2dp(5),
+        marginTop: px2dp(8),
     },
     contentBox: {
         width: px2dp(335),
@@ -37,6 +37,9 @@ const styles = StyleSheet.create({
     avatarName: {
         marginTop: px2dp(10),
         alignSelf: 'center',
+    },
+    listView: {
+        marginTop: px2dp(50),
     },
 })
 
