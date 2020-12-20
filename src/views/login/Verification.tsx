@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect, useRef } from 'react'
 import styles from '../../styles/verification'
 import { GoBack } from '../../utils/goback'
