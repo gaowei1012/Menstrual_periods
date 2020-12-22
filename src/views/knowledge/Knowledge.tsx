@@ -2,8 +2,10 @@ import React from 'react'
 import styles from '../../styles/knowledge'
 import { SafeAreaView, Image, View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { NavigationBar } from '../../navigation/TopNavigationBar'
-import ArrowSvg from '../../assets/svg/arrow_right.svg'
 import NavigationUtil from '../../navigation/NavigationUtil'
+
+// svg
+import ArrowSvg from '../../assets/svg/arrow_right.svg'
 
 const StatusBar = {
     backgroundColor: '#ffffff',
@@ -11,8 +13,6 @@ const StatusBar = {
 }
 
 const source_url = 'https://iph.href.lu/320x94?fg=666666&bg=cccccc'
-
-type listType = {}
 
 const List = () => {
     return (
