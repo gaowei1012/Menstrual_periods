@@ -2,11 +2,10 @@ import { StyleSheet } from 'react-native'
 import { px2dp } from '../utils/px2dp'
 
 const styles = StyleSheet.create({
-    container: {
+    registerContainer: {
         flex: 1,
-        backgroundColor: '#f9f9f9f9',
     },
-    loginContent: {
+    registerContent: {
         width: px2dp(350),
         alignSelf: 'center',
         marginTop: px2dp(60),
@@ -16,22 +15,13 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '700',
     },
-    loginLogo: {
-        width: px2dp(120),
-        height: px2dp(60),
-        backgroundColor: 'red',
-        alignSelf: 'center',
-    },
-    loginInput: {
+    registerInput: {
         alignSelf: 'center',
         marginTop: px2dp(60),
     },
     fot: {
         width: px2dp(92),
         marginTop: px2dp(20),
-        // borderBottomColor: 'blue',
-        // borderBottomWidth: 0.5,
-        // paddingBottom: px2dp(4),
     },
 })
 

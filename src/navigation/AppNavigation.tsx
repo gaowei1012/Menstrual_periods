@@ -9,6 +9,7 @@ import KnowledgePage from '../views/knowledge'
 import PersonalPage from '../views/personal'
 import HomePage from '../views/home'
 import LoginPage from '../views/login'
+import RegisterPage from '../views/register'
 import VerifiPage from '../views/login/Verification'
 import SharePage from '../views/personal/Share'
 import SettingPage from '../views/personal/Setting'
@@ -97,6 +98,12 @@ const MainNavigator = createStackNavigator({
     },
     KnowledgeDetailPage: {
         screen: KnowledgeDetailPage,
+        navigationOptions: {
+            header: null,
+        },
+    },
+    RegisterPage: {
+        screen: RegisterPage,
         navigationOptions: {
             header: null,
         },

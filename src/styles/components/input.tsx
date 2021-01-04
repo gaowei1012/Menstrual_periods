@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     inputStyle: {
         width: px2dp(280),
         height: px2dp(38),
+        marginBottom: px2dp(30),
         backgroundColor: '#FFFBFB',
         borderRadius: px2dp(18),
         textAlign: 'center',
